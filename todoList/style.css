@@ -1,0 +1,114 @@
+*{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    background-image: linear-gradient(120deg,#108cd9,#cb6262);
+}
+h1{
+    font-size: 2rem;
+    margin: 0;
+}
+
+h1, form{
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form input, form button{
+    padding: .5rem;
+    font-size: 2rem;
+    border: none;
+    background-color: white;
+}
+form button{
+    color: #1392e7;
+    background: rgb(233,226,30);
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+form button:hover{
+    color:rgb(233,226,30) ;
+    background-color:#1392e7 ;
+}
+
+select{
+    appearance: none;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    color: #1392e7;
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+.search{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+.search::after{
+    content: "\25BC";
+    position: absolute;
+    background: #1392e7;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all .3s ease;
+}
+.search:hover::after{
+    background: white;
+    color: #1392e7;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.todo-list{
+    min-width: 50%;
+    list-style: none;
+    margin: auto;
+}
+.todo{
+    margin: 1rem;
+    background: white;
+    color: #0b2231;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all .5s ease;
+    box-shadow: 8px 8px 8px black;
+}
+.todo-item{
+    flex: 1;
+    padding: 0rem .5rem;
+}
+.complete-btn,.trash-btn{
+    background: rgb(233,30,30);
+    color: #0b2231;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+}
+.complete-btn{
+    background: rgb(73,204,73);
+}
+
+.fa-trash,.fa-check{
+    pointer-events: none;
+}
+.done{
+    text-decoration: line-through;
+    opacity: .5;
+}
+.fail{
+    opacity: 0;
+    transform: translateY(1rem) rotateZ(360deg);
+}
